@@ -1,0 +1,49 @@
+<div class="lista">
+    <h2>LISTA DE USUARIOS</h2>
+
+    <div>
+        <button (click)="nuevoUsuario()" class="button" >AÑADIR UN USUARIO</button>
+    </div>
+    
+    <div>
+        <app-datos-usuarios *ngFor="let usuario of usuarios"
+            [usuario]="usuario">
+        </app-datos-usuarios>
+    </div>
+    
+</div>
+
+
+<div class="lista">
+    <h2>LISTA DE BARES</h2>
+
+    <div>
+        <button (click)="nuevoBar()" class="button" >AÑADIR UN BAR</button>
+    </div>
+
+    <div>
+        <app-datos-bares *ngFor="let bar of bares"
+            [bar]="bar">
+        </app-datos-bares>
+    </div>
+
+</div>
+
+<div class="lista">
+    <h2>LISTA DE COMUNIDADES</h2>
+
+    <div>
+        <button (click)="usuarioToComunidad()" class="button"> AÑADIR USUARIO A COMUNIDAD</button>
+    </div>
+
+    <div>
+        <button (click)="nuevaComunidad()" class="button" >AÑADIR UNA COMUNIDAD</button>
+    </div>
+
+    <div>
+        <app-datos-comunidades *ngFor="let comunidad of comunidades"
+            [comunidad]="comunidad">
+        </app-datos-comunidades>
+    </div>
+
+</div>

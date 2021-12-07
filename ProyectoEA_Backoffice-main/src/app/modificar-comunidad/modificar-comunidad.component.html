@@ -1,0 +1,74 @@
+<div>
+    <h2>MODIFICAR UNA COMUNIDAD:</h2>
+    <form [formGroup]="comunidadForm" (ngSubmit)="modificarcomunidad()">
+
+
+      <p>
+        ID comunidad: <input type="string" placeholder="ID comunidad" formControlName="id" />*
+        <ng-container
+          *ngIf="!formControls.id.valid && formControls.id.touched">
+          <p *ngIf="formControls.id.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+    <p>
+      Name: <input type="string" placeholder="Name" formControlName="name" />*
+      <ng-container
+        *ngIf="!formControls.name.valid && formControls.name.touched">
+        <p *ngIf="formControls.name.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+    <p>
+      Propietario: <input type="string" placeholder="Propietario" formControlName="owner" />*
+      <ng-container
+        *ngIf="!formControls.owner.valid &&formControls.owner.touched">
+        <p *ngIf="formControls.owner.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+    <p>
+        ID propietario: <input type="string" placeholder="Propietario" formControlName="idOwner" />*
+        <ng-container
+          *ngIf="!formControls.idOwner.valid &&formControls.idOwner.touched">
+          <p *ngIf="formControls.idOwner.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+      <p>
+        Descripcion: <input type="string" placeholder="Descripcion" formControlName="descripcion" />*
+        <ng-container
+          *ngIf="!formControls.descripcion.valid &&formControls.descripcion.touched">
+          <p *ngIf="formControls.descripcion.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+      <p>
+        URL imagen: <input type="string" placeholder="URL imagen" formControlName="imageUrl" />*
+        <ng-container
+          *ngIf="!formControls.imageUrl.valid &&formControls.imageUrl.touched">
+          <p *ngIf="formControls.imageurl.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+      <p>
+        <input type="submit" value="Eliminar" (click) = "delete()" />
+        <input type="submit" value="Modificar" [disabled]="comunidadForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>

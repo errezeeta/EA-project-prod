@@ -1,0 +1,42 @@
+<div>
+    <h2>NUEVA COMUNIDAD:</h2>
+    <form [formGroup]="comunidadForm" (ngSubmit)="addcomunidad()">
+
+      <p>
+      Name: <input type="string" placeholder="Name" formControlName="name" />*
+      <ng-container
+        *ngIf="!formControls.name.valid && formControls.name.touched">
+        <p *ngIf="formControls.name.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+
+    <p>
+      Propietario: <input type="string" placeholder="Propietario" formControlName="owner" />*
+      <ng-container
+        *ngIf="!formControls.owner.valid &&formControls.owner.touched">
+        <p *ngIf="formControls.owner.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      ID propietario: <input type="string" placeholder="ID propietario" formControlName="idOwner" />*
+      <ng-container
+        *ngIf="!formControls.idOwner.valid &&formControls.idOwner.touched">
+        <p *ngIf="formControls.idOwner.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+      <p>
+        <input type="submit" value="Añadir" [disabled]="comunidadForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
+  

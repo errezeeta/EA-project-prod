@@ -1,0 +1,28 @@
+<div class="datos-comunidades" *ngIf="id">
+    <form [formGroup]="comunidadForm" (ngSubmit)="ver()">
+    <p>
+        ID comunidad: {{comunidad.id}}
+    </p>
+
+    <p>
+        Name: {{comunidad.name}}
+    </p>
+
+    <p>
+        Propietario: {{comunidad.owner}}
+    </p>
+
+    <p>
+        ID propietario: {{comunidad.idOwner}}
+    </p>
+
+    <p>
+        Descripcion: {{comunidad.descripcion}}
+    </p>
+
+    <p>
+        URL imagen: {{comunidad.imageurl}}
+    </p>
+
+    </form>
+</div>

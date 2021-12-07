@@ -1,0 +1,50 @@
+<div class="datos-usuarios" *ngIf="usuario">
+    <form [formGroup]="usuarioForm" (ngSubmit)="ver()">
+    <p>
+        ID usuario: {{usuario.id}}
+    </p>
+
+    <p>
+        Username: {{usuario.username}}
+    </p>
+
+    <p>
+        Password: {{usuario.password}}
+    </p>
+
+    <p>
+        Email: {{usuario.email}}
+    </p>
+
+    
+    <p>
+        Nombre: {{usuario.nombre}}
+    </p>
+
+    <p>
+        Edad: {{usuario.edad}}
+    </p>
+
+    <p>
+        Descripcion: {{usuario.descripcion}}
+    </p>
+
+    <p>
+        URL imagen: {{usuario.imageurl}}
+    </p>
+
+    <p>
+        Puntuacion: {{usuario.puntuacion}}
+    </p>
+    </form>
+</div>
+
+<div class="lista">
+    <h2>Bares del usuario:</h2>    
+    <div>
+        <app-datos-bares *ngFor="let bar of bares"
+            [bar]="bar">
+        </app-datos-bares>
+    </div>
+    
+</div>

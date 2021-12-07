@@ -1,0 +1,20 @@
+.datos-bares{
+    border: solid;
+    height: 440px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}

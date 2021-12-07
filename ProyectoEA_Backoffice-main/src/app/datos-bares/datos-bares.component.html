@@ -1,0 +1,53 @@
+<div class="datos-bares" *ngIf="bar">
+    <p>
+        ID bar: {{bar.id}}
+    </p>
+
+    <p>
+        Name: {{bar.name}}
+    </p>
+
+    <p>
+        Address: {{bar.address}}
+    </p>
+
+    <p>
+        Tipo de musica: {{bar.musicTaste}}
+    </p>
+
+    <p>
+        Propietario: {{bar.owner}}
+    </p>
+
+    <p>
+        ID propietario: {{bar.idOwner}}
+    </p>
+
+    <p>
+        Aforo: {{bar.aforo}}
+    </p>
+
+    <p>
+        Aforo maximo: {{bar.aforoMax}}
+    </p>
+
+    <p>
+        Descripcion: {{bar.descripcion}}
+    </p>
+
+    <p>
+        URL imagen: {{bar.imageUrl}}
+    </p>
+
+    <p>
+        Horario: {{bar.horario}}
+    </p>
+
+    <button (click) = "ver()">
+        VER
+    </button>
+
+    <button (click) = "modificar()">
+        MODIFICAR
+    </button>
+</div>

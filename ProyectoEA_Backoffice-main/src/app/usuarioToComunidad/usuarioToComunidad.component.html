@@ -1,0 +1,33 @@
+<div>
+    <h2>AÑADIR/ELIMINAR USUARIO DE COMUNIDAD:</h2>
+    <form [formGroup]="comunidadForm" (ngSubmit)="usuarioToComunidad()">
+  
+
+    <p>
+      ID usuario: <input type="string" placeholder="Propietario" formControlName="idusuario" />*
+      <ng-container
+        *ngIf="!formControls.idusuario.valid &&formControls.idusuario.touched">
+        <p *ngIf="formControls.idusuario.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      ID comunidad: <input type="string" placeholder="ID propietario" formControlName="idcomunidad" />*
+      <ng-container
+        *ngIf="!formControls.idcomunidad.valid &&formControls.idcomunidad.touched">
+        <p *ngIf="formControls.idcomunidad.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+        <input type="submit" value="Añadir" [disabled]="comunidadForm.invalid" />
+        <input type="submit" value="Eliminar" [disabled]="comunidadForm.invalid" (click) = "delete()" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
+  

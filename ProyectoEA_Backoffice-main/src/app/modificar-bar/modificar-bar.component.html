@@ -1,0 +1,125 @@
+<div>
+    <h2>MODIFICAR UN BAR:</h2>
+    <form [formGroup]="barForm" (ngSubmit)="modificarbar()">
+
+      <p>
+        ID Bar: <input type="string" placeholder="ID bar" formControlName="id" />*
+        <ng-container
+          *ngIf="!formControls.id.valid && formControls.id.touched">
+          <p *ngIf="formControls.id.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+
+      <p>
+      Name: <input type="string" placeholder="Name" formControlName="name" />*
+      <ng-container
+        *ngIf="!formControls.name.valid && formControls.name.touched">
+        <p *ngIf="formControls.name.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+    <p>
+      Address: <input type="string" placeholder="Address" formControlName="address" />*
+      <ng-container
+        *ngIf="!formControls.address.valid &&formControls.address.touched">
+        <p *ngIf="formControls.address.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Tipo de musica: <input type="string" placeholder="Tipo de musica" formControlName="musicTaste" />*
+      <ng-container
+        *ngIf="!formControls.musicTaste.valid &&formControls.musicTaste.touched">
+        <p *ngIf="formControls.musicTaste.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Propietario: <input type="string" placeholder="Propietario" formControlName="owner" />*
+      <ng-container
+        *ngIf="!formControls.owner.valid &&formControls.owner.touched">
+        <p *ngIf="formControls.owner.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      ID propietario: <input type="string" placeholder="ID propietario" formControlName="idOwner" />*
+      <ng-container
+        *ngIf="!formControls.idOwner.valid &&formControls.idOwner.touched">
+        <p *ngIf="formControls.idOwner.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+    
+    <p>
+      Aforo: <input type="string" placeholder="Aforo" formControlName="aforo" />*
+      <ng-container
+        *ngIf="!formControls.aforo.valid &&formControls.aforo.touched">
+        <p *ngIf="formControls.aforo.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    
+    <p>
+      Aforo maximo: <input type="string" placeholder="Aforo maximo" formControlName="aforoMax" />*
+      <ng-container
+        *ngIf="!formControls.aforoMax.valid &&formControls.aforoMax.touched">
+        <p *ngIf="formControls.aforoMax.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    
+    <p>
+      Horario: <input type="string" placeholder="Horario" formControlName="horario" />*
+      <ng-container
+        *ngIf="!formControls.horario.valid &&formControls.horario.touched">
+        <p *ngIf="formControls.horario.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    
+    <p>
+      Descripcion: <input type="string" placeholder="Descripcion" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid &&formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+    
+    <p>
+      URL imagen: <input type="string" placeholder="URL imagen" formControlName="imageUrl" />*
+      <ng-container
+        *ngIf="!formControls.imageUrl.valid &&formControls.imageUrl.touched">
+        <p *ngIf="formControls.imageUrl.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+      <p>
+        <input type="submit" value="Eliminar" (click) = "delete()" />
+        <input type="submit" value="Modificar" [disabled]="barForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
